@@ -2,7 +2,7 @@ import './App.css';
 import PhotoGallery from './components/PhotoGallery';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import User from './pages/User';
+import UserForm from './pages/User';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Routes>
           <Route path="/" exact element={<PhotoGallery/>} />
-          <Route path="/user"  element={<User/>} />
+          <Route path="/user"  element={<UserForm/>} />
         </Routes>
   </Router>
   );

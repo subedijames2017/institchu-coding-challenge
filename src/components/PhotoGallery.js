@@ -9,6 +9,7 @@ const PhotoGallery = () => {
   useEffect(() => {
     async function fetchPhotos() {
       try {
+        // fetching photos from api for albub 1 only
         const photosData = await getPhotosByAlbumId(albumId);
         setPhotos(photosData);
       } catch (error) {

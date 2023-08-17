@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import postUserData from '../service';
 
-
+// Validate user inputs.
 const validationSchema = Yup.object().shape({
   name: Yup.string().required('Name is required'),
   email: Yup.string().email('Invalid email').required('Email is required'),
@@ -26,7 +26,7 @@ const validationSchema = Yup.object().shape({
   }),
 });
 
-const NewUserForm = () => {
+const UserForm = () => {
   const handleSubmit = async (values, actions) => {
     actions.setSubmitting(true)
     try {
@@ -256,4 +256,4 @@ const NewUserForm = () => {
   );
 };
 
-export default NewUserForm;
+export default UserForm;

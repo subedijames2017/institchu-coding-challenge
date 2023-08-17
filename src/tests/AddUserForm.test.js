@@ -14,7 +14,7 @@ describe('UserForm', () => {
 
     const { getByPlaceholderText, getByText } = render(<UserForm />);
 
-    // Fill in form inputs
+    // Fill in user form inputs getting by placeholder text.
     fireEvent.change(getByPlaceholderText('Name'), { target: { value: 'James Subedi' } });
     fireEvent.change(getByPlaceholderText('Email'), { target: { value: 'jamessubedites@gmail.com' } });
     fireEvent.change(getByPlaceholderText('Website'), { target: { value: 'https://subedijames2017.github.io/' } });
@@ -26,9 +26,6 @@ describe('UserForm', () => {
     fireEvent.change(getByPlaceholderText('Company Name'), { target: { value: 'Acepirit' } });
     fireEvent.change(getByPlaceholderText('Catch Phrase'), { target: { value: 'Ace Of Spirit' } });
     fireEvent.change(getByPlaceholderText('Business Service'), { target: { value: 'Digital Assistance' } });
-
-
-
 
     // Simulate form submission
     fireEvent.click(getByText('Submit'));
